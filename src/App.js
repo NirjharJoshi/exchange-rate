@@ -1,6 +1,25 @@
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import ConversionForm from "./components/ConversionForm";
+import { currencyActions } from "./store";
 
 function App() {
+  const dispatch = useDispatch();
+  const supportedCodes = useSelector(
+    (state) => state.currencyState.supportedCodes
+  );
+  useEffect(() => {
+    if (supportedCodes.length > 0) return;
+    console.log("CONVERSION_CODES_ARE_FETCHED !!!");
+    fetch(
+      `https://v6.exchangerate-api.com/v6/${process.env.REACT_APP_API_KEY}/codes`
+    )
+      .then((res) => res.json())
+      .then((data) =>
+        dispatch(currencyActions.addSupportedCodes(data.supported_codes))
+      );
+  }, [dispatch, supportedCodes]);
+
   return (
     <div
       className="d-flex flex-column align-items-center mx-auto mt-5"
