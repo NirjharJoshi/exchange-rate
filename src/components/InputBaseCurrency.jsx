@@ -18,7 +18,7 @@ const InputBaseCurrency = () => {
       className="form-control"
       type="number"
       value={unitBaseCurrency}
-      style={{ margin: "0px 100px" }}
+      style={{ margin: "0px 25px", maxWidth: "200px" }}
     />
   );
 };

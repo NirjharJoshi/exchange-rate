@@ -20,7 +20,7 @@ const TargetCurrencyDDL = (props) => {
       id="to"
       className="form-select"
       aria-label="Default select example"
-      style={{ margin: "0px 50px" }}
+      style={{ margin: "0px 20px", maxWidth: "200px" }}
     >
       {props.children}
     </select>

@@ -20,12 +20,12 @@ const ConversionForm = () => {
 
   return (
     <>
-      <div className="d-flex justify-content-around align-items-center w-100 my-4">
+      <div className="d-flex justify-content-around align-items-center w-75 my-4">
         <BaseCurrencyDDL>{optionsList}</BaseCurrencyDDL>
         <InputBaseCurrency />
       </div>
       <Swap />
-      <div className="d-flex justify-content-around align-items-center w-100 my-4">
+      <div className="d-flex justify-content-around align-items-center w-75 my-4">
         <TargetCurrencyDDL>{optionsList}</TargetCurrencyDDL>
         <InputTargetCurrency />
       </div>

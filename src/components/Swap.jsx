@@ -19,7 +19,7 @@ const Swap = () => {
     dispatch(currencyActions.updateToCurrency(baseCurrencyCode));
   };
   return (
-    <div className="d-flex justify-content-around align-items-center w-100 my-2">
+    <div className="d-flex justify-content-around align-items-center w-75 my-2">
       <button onClick={handleSwap} className="btn btn-primary">
         SWAP
       </button>

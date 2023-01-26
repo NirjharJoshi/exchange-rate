@@ -12,7 +12,7 @@ export const InputTargetCurrency = () => {
       className="form-control"
       type="number"
       value={unitToCurrency}
-      style={{ margin: "0px 100px" }}
+      style={{ margin: "0px 25px", maxWidth: "200px" }}
     />
   );
 };
